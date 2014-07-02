@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>HTML5 and its future</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>HTML5 and its future - Part I</h1>
+                    <p class="new-line">
+                        Created by <a href="http://weibo.com/u/1954880174">Leijun Yang</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Who is this guy?</h2>
+                    <img class="left" src="img/self.jpg"/>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <strong>
+                                    会编程序的猪
+                                </strong>
+                            </li>
+                            <li>
+                                <strong>http://weibo.com/u/1954880174</strong>
+                            </li>
+							<li>
+                                <strong>https://github.com/sdd330</strong>
+                            </li>
+                        </ul>
+                        <br><br>
+                    </div>
+                </section>
+				
+				<section>
+                    <h2>Is this about Native vs HTML5?</h2>
+					<img width="600px" src="img/fight.gif">
+                </section>
+				
+				<section>
+					<img width="600px" src="img/no.gif">
+                </section>
+				
+				<section>
+                    <h2>Let's talk about my first web page</h2>
+                </section>
+				
+				<section>
+					<img src="img/hellohtml.jpg">
+				</section>
+				
+				<section>
+					<h2>Not so bad ...</h2>
+					<img width="600px" src="img/slowclap.gif">
+				</section>
+				
+                <section>
+                    <h2>Old generations websites</h2>
+                    <ul class="pull-down">
+                        <li>HTML pages build by web designers one by one</li>
+                        <li>Read-only, non-interactive</li>
+						<li>No multimedia support (like sounds or videos)</li>
+                        <li>Not possible to build applications like games</li>
+						<li>...</li>
+                    </ul>
+                </section>
+				
+				<section>
+                    <h2>How we build the next generation web?</h2>
+                </section>
+				
+				<section>
+					<a href="http://fff.cmiscm.com/">http://fff.cmiscm.com/</a>
+					<img src="img/webhtml5.jpg">
+                </section>
+                
+				<section>
+					<img width="300px" style="background-color:white" src="img/HTML5_Logo_256.png">
+                </section>
+				
+				<section>
+                    <h2>HTML5 technologies you’ve heard of?</h2>
+                </section>
+				
+				<section>
+                    <h2><a href="https://developer.mozilla.org/en/docs/web/Guide/HTML/HTML5">HTML5 technologies</a></h2>
+                    <ul class="pull-down">
+						<li>Semantics</li>
+						<li>2D/3D Graphics & Effects</li>
+						<li>Styling</li>
+						<li>Device Access</li>
+						<li>Multimedia</li>
+                        <li>Connectivity</li>
+						<li>Offline & Storage</li>
+						<li>Performance & Integration</li>
+                    </ul>
+                </section>
+				
+				<section>
+                    <h1>Agenda - Part I</h1>
+					<ul class="pull-down">
+						<li>Semantics</li>
+						<li>2D/3D Graphics & Effects</li>
+						<li>Styling</li>
+						<li>Device Access</li>
+					</ul>
+                </section>
+				
+				<section>
+                    <h1>Semantics</h1>
+					<ul class="pull-down">
+						<li>New semantic elements</li>
+					</ul>
+                </section>
+				
+				<section>
+					<h2><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list">Semantic Elements</a></h2>
+					<img src="img/semantics.png">
+				</section>
+				
+				<section>
+					<h2>Template Element</h2>
+					<img width="600px" src="img/template.png">
+				</section>
+				
+				<section>
+                    <h1>2D/3D Graphics & Effects</h1>
+					<ul class="pull-down">
+						<li>Canvas</li>
+						<li>WebGL</li>
+					</ul>
+				</section>
+				
+				<section>
+                    <h2>Canvas smiley</h2>
+					<pre><code class="js">
+						var canvas = document.getElementById('canvas');
+						var ctx = canvas.getContext('2d');
+						ctx.beginPath();
+						ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
+						ctx.moveTo(110,75);
+						ctx.arc(75,75,35,0,Math.PI,false);   // Mouth (clockwise)
+						ctx.moveTo(65,65);
+						ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
+						ctx.moveTo(95,65);
+						ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
+						ctx.stroke();
+					</code></pre>
+					<img src="img/Canvas_smiley.png">
+				</section>
+				
+				<section>
+                    <h2>Demo</h2>
+                </section>
+				
+				<section>
+					<h2>WebGL</h2>
+					<img src="img/session.png">
+				</section>
+				
+				<section>
+					<h2>WebGL cube</h2>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">https://developer.mozilla.org/en-US/docs/Web/WebGL</a>
+					<img src="img/webglcube.png">
+				</section>
+				
+				<section>
+                    <h2>three.js</h2>
+					<img src="img/threejs.png">
+					<div>
+						<pre><code class="js">
+							var scene = new THREE.Scene(); 	// Creating the scene
+							var aspect  = window.innerWidth / window.innerHeight;
+							var camera = new THREE.PerspectiveCamera( 75, aspect, 0.1, 1000 ); 
+							var renderer = new THREE.WebGLRenderer(); 
+							renderer.setSize( window.innerWidth, window.innerHeight ); 
+							document.body.appendChild( renderer.domElement );
+							var geometry = new THREE.CubeGeometry(1,1,1);  	// Add one cube
+							var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); 
+							var cube = new THREE.Mesh( geometry, material ); 
+							scene.add( cube );
+						</code></pre>
+					</div>
+				</section>
+				
+				<section>
+                    <h2>Demo</h2>
+                </section>
+				
+				<section>
+                    <h2>voxel.js</h2>
+					<ul class="pull-down">
+						<li>Game engine based on WebGL</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Build your own Minecraft?</h2>
+					<a href="http://voxeljs.com/">http://voxeljs.com/</a>
+					<img src="img/minecraft.jpg">
+				</section>
+				
+				<section>
+                    <h2>voxel spider game</h2>
+					<a href="http://substack.net/projects/voxel-spider/">http://substack.net/projects/voxel-spider/</a>
+					<pre><code class="js">
+							spider.position.y = 200;
+							spider.position.x = Math.random() * 300 - 150;
+							spider.position.z = Math.random() * 300 - 150;
+							
+							spider.on('block', function () { spider.jump() });
+							spider.notice(substack, { radius: 500 });
+							
+							spider.on('notice', function (player) {
+								spider.lookAt(player);
+								spider.move(0, 0, 0.5);
+							});
+					</code></pre>
+				</section>
+
+				<section>
+                    <h1>Styling</h1>
+					<ul class="pull-down">
+						<li>CSS3</li>
+					</ul>
+                </section>
+				
+				<section>
+					<h2>CSS Modules and Snapshots</h2>
+					<a href="http://www.w3.org/TR/#tr_CSS">http://www.w3.org/TR/#tr_CSS</a>
+					<img src="img/CSS_Modules_and_Snapshots.png">
+				</section>
+				
+				<section>
+					<h2>CSS3 Transforms</h2>
+					<div>
+						<img width="300px" style="background-color:white" src="img/csstransform.png">
+					</div>
+				</section>
+				
+				<section>
+					<h2>CSS3 Animations and Transitions</h2>
+					<div>
+						<img width="300px" style="background-color:white" src="img/TimingFunction.png">
+					</div>
+				</section>
+				
+				<section>
+					<h2>One Animation Example</h2>
+					<div>
+						<img style="background-color:white" src="img/animation.png">
+					</div>
+				</section>
+				
+				<section>
+					<h2>CSS3 Environment Media Features?</h2>
+				</section>
+				
+				<section>
+					<h2>Media Queries Level 4: light-level</h2>
+					<a href="http://dev.w3.org/csswg/mediaqueries4/#mf-environment">http://dev.w3.org/csswg/mediaqueries4/#mf-environment</a>
+					<img src="img/CSSLightLevel.png">
+				</section>
+				
+				<section>
+					<h2>Advertisement by Taobao</h2>
+					<div>
+						<img width="300px" style="background-color:white" src="img/CSSLightLevel1.png">
+						<img width="300px" style="background-color:white" src="img/CSSLightLevel2.png">
+					</div>
+				</section>
+				
+                <section>
+                    <h1>Device Access</h1>
+                </section>
+				
+                <section>
+                    <h2>W3C Device API</h2>
+					<a href="http://www.w3.org/2009/dap/">http://www.w3.org/2009/dap/</a>
+					<img width="800px" src="img/W3CDeviceAPI.png">
+                </section>
+				
+				<section>
+					<h2>Phonegap</h2>
+					<img width="600px" src="img/Phonegap.png">
+				</section>
+				
+				<section>
+					<h2>Device Orientation API</h2>
+					<div>
+						<img width="300px" style="background-color:white" src="img/device-alpha.png">
+						<img width="300px" style="background-color:white" src="img/device-beta.png">
+						<img width="300px" style="background-color:white" src="img/device-gamma.png">
+					</div>
+				</section>
+				
+				<section>
+					<h2>Capture Device Orientation</h2>
+					<pre><code class="js">
+						function eventListener (event) {
+						    var alpha = event.alpha;
+						    var beta = event.beta;
+						    var gamma = event.gamma;
+						}
+						window.addEventListener('deviceorientation', eventListener, false);
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Car Game</h2>
+					<img width="600px" src="img/cargame.jpg">
+				</section>
+				
+				<section>
+                    <h2>Media Capture</h2>
+					<ul class="pull-down">
+						<li>getUserMedia</li>
+					</ul>
+                </section>
+				
+				<section>
+					<h2>Access to user's camera</h2>
+					<pre><code class="js">
+						function successCallback(stream){
+						    video.src = window.URL.createObjectURL(stream);
+						}
+
+						function errorCallback(e){
+							console.error(e);
+						}
+						
+						var params = {audio: true, video: true};
+						navigator.getUserMedia(params, successCallback, errorCallback);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>A Real Case in Tmall</h2>
+					<a href="http://www.tmall.com/go/market/main/zhubao.php">http://www.tmall.com/go/market/main/zhubao.php</a>
+					<div>
+						<img width="300px" style="background-color:white" src="img/fitting1.png">
+						<img width="300px" style="background-color:white" src="img/fitting2.png">
+						<img width="300px" style="background-color:white" src="img/fitting3.png">
+					</div>
+				</section>
+				
+				<section>
+					<h2>Webcam Toy</h2>
+					<a href="http://webcamtoy.com/app/">http://webcamtoy.com/app/</a>
+				</section>
+				
+				<section>
+					<h2>HTML5 Face Tracking</h2>
+					<a href="http://shinydemos.com/facekat/">http://shinydemos.com/facekat/</a>
+				</section>
+				
+				<section>
+					<h2>AR with google glass?</h2>
+					<img src="img/AR.jpg">
+				</section>
+				
+				<section>
+					<h2>Virtual Fitting Room</h2>
+					<img src="img/Fitting.jpg">
+				</section>
+				
+				<section>
+                    <h1>Part I Summary</h1>
+                </section>
+				
+				<section>
+                    <h1>Open Discussion</h1>
+                </section>
+				
+				<section>
+                    <h1>Agenda - Part II</h1>
+					<ul class="pull-down">
+						<li>Offline & Storage</li>
+						<li>Multimedia</li>
+                        <li>Connectivity</li>
+						<li>Performance & Integration</li>
+					</ul>
+                </section>
+				
+				<!--div ref>http://dev.opera.com/articles/</div-->
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+        </script>
+
+    </body>
+</html>
