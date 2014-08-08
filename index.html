@@ -407,6 +407,11 @@
                 </section>
 				
 				<section>
+                    <h1>Revisit</h1>
+                    <img src="img/shenjingmao.jpg">
+                </section>
+
+				<section>
                     <h1>Agenda - Part II</h1>
 					<ul class="pull-down">
 						<li>Offline & Storage</li>
@@ -416,6 +421,180 @@
 					</ul>
                 </section>
 				
+				<section>
+                    <h1>Offline & Storage</h1>
+					<ul class="pull-down">
+						<li>Application Cache</li>
+						<li>IndexedDB</li>
+						<li>WebStorage</li>
+						<li>...</li>
+					</ul>
+                </section>
+				
+				<section>
+                    <h2>Why we need this?</h2>
+                </section>
+
+                <section>
+					<h2>Reactive to Proactive</h2>
+                </section>
+
+                <section>
+                	<h2>Application Cache</h2>
+					<img src="img/appcacheupdate.png">
+                    <pre>
+                    	&lt;html manifest="manifest.appcache"&gt;
+                    	CACHE MANIFEST
+
+						CACHE:
+						index.html 
+						../css/main.css
+						../js/lib/ga.js
+						../favicon.ico
+
+						FALLBACK:
+						/ offline.html
+
+						NETWORK:
+						*
+                 	</pre>
+                </section>
+
+                <section>
+                	<img src="img/appcache.png">
+				</section>
+
+				<section>
+					<h2>Local Storage</h2>
+                	<img src="img/localStorage.png">
+				</section>
+
+				<section>
+					<h2>Service Worker</h2>
+					<a href="http://jakearchibald.com/2014/service-worker-first-draft/">http://jakearchibald.com/2014/service-worker-first-draft/</a>
+                	<img src="img/serviceworker.png">
+				</section>
+				
+				<section>
+                    <h1>Multimedia</h1>
+                    <ul class="pull-down">
+						<li>Audio and Video</li>
+					</ul>
+                </section>
+
+                <section>
+					<h2>Web Audio</h2>
+					<img src="img/soundtrap.png">
+              	</section>
+
+              	<section>
+              		<pre><code><audio controls>
+	<source src="audio/animalSounds.ogv" type="audio/ogg" />
+	<source src="audio/animalSounds.mp3" type="audio/mp3" />
+</audio></code></pre>
+              		<audio controls>
+	<source src="audio/animalSounds.ogv" type="audio/ogg" />
+	<source src="audio/animalSounds.mp3" type="audio/mp3" />
+</audio>
+              	</section>
+
+				<section>
+					<img src="img/mediacapture.png">
+				</section>
+
+              	<section>
+              		<h2>Interactive Audio</h2>
+              		<a href="http://airtightinteractive.com/demos/js/reactive/">http://airtightinteractive.com/demos/js/reactive/</a>
+              	</section>
+
+              	<section>
+					<h2>Web Video</h2>
+					<video src="video/devstories.webm" controls></video>
+				</section>
+				
+              	<section>
+              		<h2>Video Element</h2>
+					<img src="img/video.png">
+              	</section>
+				
+				<section>
+              		<h2>Media Source Extensions</h2>
+		  			<img src="img/pipeline_model.png">
+              	</section>
+				
+				<section>
+					<h2>Dash.js</h2>
+					<img src="img/dash.png">
+				</section>
+
+				<section>
+                    <h1>Connectivity</h1>
+                    <ul class="pull-down">
+						<li>WebSocket</li>
+						<li>WebRTC</li>
+					</ul>
+                </section>
+				
+				<section>
+					<h2>WebSocket: Push instead of Pull</h2>
+					<img class="left" src="img/socketio.png">
+					<img class="right" src="img/websocket.gif">
+				</section>
+				
+
+				<section>
+					<h2>WebRTC</h2>
+					<img src="img/WebRTCpublicdiagram.png">
+				</section>
+				
+				<section>
+					<h2>Peer Connection</h2>
+					<img src="img/webrtc.png">
+				</section>
+
+				<section>
+					<h2>Data Channel</h2>
+					<img src="img/cdn.png">
+				</section>
+
+				<section>
+					<h1>Performance</h1>
+				</section>
+
+				<section>
+					<img src="img/perf.png">
+				</section>
+				
+				<section>
+					<h2>Web Performance Working Group</h2>
+					<ul class="pull-down">
+						<li>Resource Timing</li>
+						<li>Async Scroll</li>
+						<li>Display Performance</li>
+					</ul>
+				</section>
+				
+				<section>
+					<img src="img/navtiming.png">
+				</section>
+
+				<section>
+					<pre>
+<code class="js">
+var loadTiming = performance.timing;
+var resources = performance.webkitGetEntriesByType("resource");
+</code>
+					</pre>
+					<img src="img/perftiming.png">
+				</section>
+				
+				<section>
+                    <h1>Part II Summary</h1>
+                </section>
+				
+				<section>
+                    <h1>Open Discussion</h1>
+                </section>
 				<!--div ref>http://dev.opera.com/articles/</div-->
             </div>
 
@@ -423,7 +602,6 @@
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
-
         <script>
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
@@ -450,7 +628,7 @@
                     { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
             });
-        </script>
 
+        </script>
     </body>
 </html>
